@@ -13,14 +13,10 @@ namespace HW4
             Console.WriteLine("I am a ostrich and I can eat");
         }
         public Ostrich() { }
-        public Ostrich(double weight, int age)
-        {
-            this.weight = weight;
-            this.age = age;
-        }
+        public Ostrich(double weight, int age) : base(weight, age) { }
         public override string ToString()
         {
-            return $"Ostrich`s weight: {weight} \r\nOstrich`s age: {age}";
+            return $"Ostrich`s weight: {Weight} \r\nOstrich`s age: {Age}";
         }
     }
 }

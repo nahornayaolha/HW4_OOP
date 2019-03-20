@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HW4
 {
-    class Cat:Animal,IMew
+    class Cat : Animal, IMew
     {
         public override void CanEat()
         {
@@ -17,14 +17,11 @@ namespace HW4
             Console.WriteLine("I am a cat and I can mew");
         }
         public Cat() { }
-        public Cat(double weight, int age)
-        {
-            this.weight = weight;
-            this.age = age;
-        }
+        public Cat(double weight, int age) : base(weight, age) { }
+
         public override string ToString()
         {
-            return $"Cat`s weight: {weight} \r\nCat`s age: {age}";
+            return $"Cat`s weight: {Weight} \r\nCat`s age: {Age}";
         }
     }
 }

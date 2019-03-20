@@ -12,19 +12,20 @@ namespace HW4
         {
             Console.WriteLine("I am a dog and I can eat");
         }
-        void IBark.CanBark()
+
+        // TODO:
+        // write 'public void IBark.CanBark()' make sense
+        // only if Dog Inherit Multiple Interfaces With the Same Methods Named 'CanBark()'
+        // good example: https://www.c-sharpcorner.com/UploadFile/rohatash/inherit-multiple-interfaces-with-the-same-method-name-in-C-Sharp/
+        public void CanBark()
         {
             Console.WriteLine("I am a dog and I can bark");
         }
         public Dog() { }
-        public Dog(double weight, int age)
-        {
-            this.weight = weight;
-            this.age = age;
-        }
+        public Dog(double weight, int age) : base(weight, age) { }
         public override string ToString()
         {
-            return $"Doggo`s weight: {weight} \r\nDoggo`s age: {age}";
+            return $"Doggo`s weight: {Weight} \r\nDoggo`s age: {Age}";
         }
     }
 }
